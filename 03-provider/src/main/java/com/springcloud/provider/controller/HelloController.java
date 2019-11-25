@@ -24,6 +24,8 @@ public class HelloController {
     @Autowired
     private RedisTemplate redisTemplate;
 
+    private String test;
+
     @Value("${server.port}")
     private String port;
 
