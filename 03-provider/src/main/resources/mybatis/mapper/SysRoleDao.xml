@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTO Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.springcloud.provider.mapper.SysRoleDao">
+    <resultMap id="SysUserResultMap" type="com.springcloud.provider.bean.SysRole">
+        <id property="id" column="id" javaType="java.lang.Integer" jdbcType="BIGINT"/>
+        <result property="name" column="name" javaType="java.lang.String" jdbcType="VARCHAR" />
+    </resultMap>
+
+    <select id="getList" resultMap="SysUserResultMap">
+        select * from sys_role
+    </select>
+</mapper>

@@ -1,0 +1,14 @@
+{
+  "resultCode":200,
+  "status": {0},
+  "code":200,
+  "data":{
+    "versionName":"1.2.0",
+    "versionInfo":[
+      "1.新版本信息......",
+      "2.新版本信息......",
+      "3.XUtil.getInstance().postJson(Urls.getWLJYList()......新版本信息新版本信息"
+    ]
+  }
+
+}
