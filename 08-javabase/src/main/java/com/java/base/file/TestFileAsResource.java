@@ -2,6 +2,8 @@ package com.java.base.file;
 
 import com.java.base.generic.T;
 import org.apache.commons.io.FileUtils;
+import org.apache.commons.io.IOUtils;
+import org.springframework.core.io.ClassPathResource;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -51,7 +53,15 @@ public class TestFileAsResource {
 
 
     public static void main (String[] args) {
-        TestFileAsResource testFileAsResource = new TestFileAsResource();
-        testFileAsResource.read();
+        /*TestFileAsResource testFileAsResource = new TestFileAsResource();
+        testFileAsResource.read();*/
+
+        try {
+            ClassPathResource resource = new ClassPathResource("template/test.json");
+            String str = IOUtils.toString(resource.getInputStream(), "UTF-8");
+            System.out.println(str);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }
